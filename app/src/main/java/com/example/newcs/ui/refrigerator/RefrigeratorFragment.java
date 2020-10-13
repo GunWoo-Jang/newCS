@@ -1,4 +1,4 @@
-package com.example.newcs.ui.dashboard;
+package com.example.newcs.ui.refrigerator;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.newcs.R;
 
-public class DashboardFragment extends Fragment {
+public class RefrigeratorFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
+    private RefrigeratorViewModel refrigeratorViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        refrigeratorViewModel =
+                ViewModelProviders.of(this).get(RefrigeratorViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_notifications, container, false);
+        final TextView textView = root.findViewById(R.id.text_notifications);
+        refrigeratorViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
