@@ -22,7 +22,7 @@ public class RecipeFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         recipeViewModel =
                 ViewModelProviders.of(this).get(RecipeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        View root = inflater.inflate(R.layout.fragment_recipe, container, false);
         final TextView textView = root.findViewById(R.id.text_dashboard);
         recipeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override

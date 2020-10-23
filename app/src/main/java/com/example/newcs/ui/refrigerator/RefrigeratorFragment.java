@@ -22,7 +22,7 @@ public class RefrigeratorFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         refrigeratorViewModel =
                 ViewModelProviders.of(this).get(RefrigeratorViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_notifications, container, false);
+        View root = inflater.inflate(R.layout.fragment_refrigerator, container, false);
         final TextView textView = root.findViewById(R.id.text_notifications);
         refrigeratorViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
